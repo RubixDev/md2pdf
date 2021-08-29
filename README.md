@@ -39,11 +39,11 @@ rm install.sh
 
 ### For the rest:
 ```bash
-bash "$(curl -fsSL https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh)"
 ```
 or
 ```bash
-bash "$(wget -O- https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh)"
+bash -c "$(wget -O- https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh)"
 ```
 
 ## Usage
