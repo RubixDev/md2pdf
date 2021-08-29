@@ -27,7 +27,7 @@ You can probably figure it out yourself, based on the two commands above
 4. Make the file executable:\
    `chmod +x md2pdf`
 5. Move the file to `/usr/local/bin`\
-   `sudo mv md2pdf /usr/bin/`
+   `sudo mv md2pdf /usr/local/bin/`
 
 ### Automatic
 Alternatively, you can also use the automatic install script, which asks for your name (which will appear in the header of the PDFs) and places the file in `/usr/local/bin`, which should be in your PATH.
