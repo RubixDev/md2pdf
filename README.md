@@ -18,8 +18,8 @@ You can probably figure it out yourself, based on the two commands above
 ## Installation
 
 ### Manually
-1. Download the [md2pdf](md2pdf.sh) file:\
-   `wget PLACEHOLDER`
+1. Download the [md2pdf](https://raw.githubusercontent.com/RubixDev/md2pdf/main/md2pdf.sh) file:\
+   `wget https://raw.githubusercontent.com/RubixDev/md2pdf/main/md2pdf.sh`
 2. Replace 'YOUR NAME HERE' at the top with your actual name. This will appear in the header of the exported PDFs:\
    `sed -i 's/YOUR NAME HERE/<name>/g' md2pdf.sh`
 3. Rename it to `md2pdf` without `.sh`:\
@@ -32,7 +32,7 @@ You can probably figure it out yourself, based on the two commands above
 ### Automatic
 Alternatively, you can also use the automatic install script, which asks for your name (which will appear in the header of the PDFs) and places the file in `/usr/local/bin`, which should be in your PATH.
 ```bash
-curl -fsSL PLACEHOLDER | bash
+curl -fsSL https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh | bash
 ```
 
 ## Usage

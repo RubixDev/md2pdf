@@ -1,7 +1,7 @@
 #!/bin/bash
 read -r -p "What is your name? " NAME
 
-curl -fsSL "PLACEHOLDER" > md2pdf || exit 1
+curl -fsSL "https://raw.githubusercontent.com/RubixDev/md2pdf/main/md2pdf.sh" > md2pdf || exit 1
 chmod +x md2pdf
 sed -i "s/YOUR NAME HERE/$NAME/g" md2pdf
 
