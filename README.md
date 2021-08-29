@@ -15,9 +15,7 @@ sudo apt install pandoc fonts-dejavu texlive-xetex
 ### Other
 You can probably figure it out yourself, based on the two commands above
 
-## Installation
-
-### Manually
+## Manual Installation
 1. Download the [md2pdf](https://raw.githubusercontent.com/RubixDev/md2pdf/main/md2pdf.sh) file:\
    `wget https://raw.githubusercontent.com/RubixDev/md2pdf/main/md2pdf.sh`
 2. Replace 'YOUR NAME HERE' at the top with your actual name. This will appear in the header of the exported PDFs:\
@@ -29,10 +27,23 @@ You can probably figure it out yourself, based on the two commands above
 5. Move the file to `/usr/local/bin`\
    `sudo mv md2pdf /usr/local/bin/`
 
-### Automatic
+## Automatic Installation
 Alternatively, you can also use the automatic install script, which asks for your name (which will appear in the header of the PDFs) and places the file in `/usr/local/bin`, which should be in your PATH.
+
+### For fish users:
 ```bash
-wget https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh && bash install.sh
+wget https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh
+bash install.sh
+rm install.sh
+```
+
+### For the rest:
+```bash
+bash "$(curl -fsSL https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh)"
+```
+or
+```bash
+bash "$(wget -O- https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh)"
 ```
 
 ## Usage
