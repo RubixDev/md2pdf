@@ -32,7 +32,7 @@ You can probably figure it out yourself, based on the two commands above
 ### Automatic
 Alternatively, you can also use the automatic install script, which asks for your name (which will appear in the header of the PDFs) and places the file in `/usr/local/bin`, which should be in your PATH.
 ```bash
-curl -fsSL https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh | bash
+wget https://raw.githubusercontent.com/RubixDev/md2pdf/main/install.sh && bash install.sh
 ```
 
 ## Usage
