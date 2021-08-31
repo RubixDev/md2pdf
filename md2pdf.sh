@@ -7,6 +7,7 @@ LEFT_HEAD=""
 CENTER_HEAD=""
 RIGHT_HEAD=""
 NAME_LOCATION="left"
+PRESERVE_TEX=false
 
 EXIT () {
     rm -r tmp
@@ -34,6 +35,10 @@ while test $# -gt 0; do
         NAME_LOCATION="$2"
         shift # Remove argument name from processing
         shift # Remove argument value from processing
+        ;;
+        --preserve-tex)
+        PRESERVE_TEX=true
+        shift # Remove argument from processing
         ;;
         *)
         OTHER_ARGUMENTS+=("$1")
@@ -126,6 +131,9 @@ xelatex tmp/tmpfile
 xelatex tmp/tmpfile || EXIT 1
 
 mv tmpfile.pdf "${OTHER_ARGUMENTS[1]}"
+if [ "$PRESERVE_TEX" = true ]; then
+    mv tmp/tmpfile.tex "${OTHER_ARGUMENTS[1]}.tex"
+fi
 rm tmpfile.aux
 rm tmpfile.log
 rm -r tmp

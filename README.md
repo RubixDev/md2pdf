@@ -52,8 +52,15 @@ md2pdf <input file> <output file> \
     -l|--left-head [header left text] \
     -c|--center-head [header center text] \
     -r|--right-head [header right text] \
-    -n|--name-location [left|center|right]
+    -n|--name-location [left|center|right] \
+    --preserve-tex
 ```
+- `-l`, `-c`, `-r` and their long counterparts control the text to appear in the head of each page
+- `-n` or `--name-location` followed by one of `left`, `center` or `right` controls where to place the name in the head
+  - By default it will be placed left
+  - The name can be overwritten by the previously mentioned flags
+  - If anything else is provided, the name will not be displayed
+- The `--preserve-tex` option keeps the generated `.tex` file
 
 ### Examples
 
